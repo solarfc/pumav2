@@ -1,0 +1,222 @@
+/*
+    delivery style
+ */
+
+.delivery {
+  background: $darker-blue;
+  padding: 110px 0 312px;
+  position: relative;
+  z-index: 15;
+
+  @include mq(md) {
+    padding: 65px 0 72px;
+  }
+
+  //h3 {
+  //  text-transform: uppercase;
+  //  color: $white;
+  //}
+
+  &__content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    margin-top: 78px;
+    position: relative;
+    z-index: 25;
+
+    @include mq(md) {
+      justify-content: space-between;
+    }
+
+    @include mq(xs) {
+      display: block;
+    }
+
+    //@include mq(s) {
+    //  display: block;
+    //}
+
+    //@include mq(s) {
+    //  align-items: flex-start;
+    //}
+
+    figure {
+      box-sizing: border-box;
+      width: 288px;
+      padding-left: 96px;
+      position: relative;
+
+      @include mq(s) {
+        width: 48%;
+        padding-left: 0;
+      }
+
+      //@include mq(s) {
+      //  width: 100%;
+      //  margin-bottom: 84px;
+      //}
+
+      @include mq(xs) {
+        width: 100%;
+        margin-bottom: 84px;
+        padding-left: 96px;
+      }
+
+      p {
+        color: $white;
+
+        @include mq(s) {
+          text-align: center;
+        }
+
+        @include mq(xs) {
+          text-align: left;
+        }
+      }
+
+      &:before {
+        content: "";
+        display: block;
+        width: 80px;
+        height: 80px;
+        box-shadow: $shadow;
+        border-radius: 50%;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+
+        @include mq(s) {
+          position: static;
+          transform: none;
+          margin: 0 auto 10px;
+        }
+
+        @include mq(xs) {
+          position: absolute;
+          transform: translateY(-50%);
+        }
+      }
+
+      &:first-child {
+
+        &:before {
+          background: url("../img/delivery/1.png") no-repeat center/auto, $gradient;
+        }
+      }
+
+      &:nth-child(2) {
+        margin: 0 25% 0 27%;
+
+        @include mq(xl) {
+          margin: 0 23.5% 0 25.5%;
+        }
+
+        @include mq(lg) {
+          margin: 0 19% 0 21%;
+        }
+
+        @include mq(md) {
+          margin: 0;
+        }
+
+        @include mq(xs) {
+          margin: 0 0 84px;
+        }
+
+        &:before {
+          background: url("../img/delivery/2.png") no-repeat center/auto, $gradient;
+        }
+      }
+
+      &:nth-child(3) {
+        margin: 64px 27% 0 25%;
+
+        @include mq(xl) {
+          margin: 64px 25.5% 0 23.5%;
+        }
+
+        @include mq(lg) {
+          margin: 64px 21% 0 19%;
+        }
+
+        @include mq(md) {
+          margin: 64px 0 0;
+        }
+
+        @include mq(xs) {
+          margin: 0 0 84px;
+        }
+
+        &:before {
+          background: url("../img/delivery/3.png") no-repeat center/auto, $gradient;
+        }
+      }
+
+      &:last-child {
+
+        @include mq(s) {
+          margin: 0;
+        }
+
+        &:before {
+          background: url("../img/delivery/4.png") no-repeat center/auto, $gradient;
+        }
+      }
+    }
+
+    &:before {
+      content: "";
+      display: block;
+      width: 475px;
+      height: 713px;
+      background: url("../img/delivery/5.png") no-repeat center/cover;
+      position: absolute;
+      bottom: 102px;
+      right: -332px;
+
+      @include mq(xxl) {
+        width: 375px;
+        height: 562px;
+        right: -125px;
+      }
+
+      @include mq(xl) {
+        width: 275px;
+        height: 412px;
+        right: -32px;
+      }
+
+      @include mq(md) {
+        width: 215px;
+        height: 322px;
+        bottom: 122px;
+      }
+
+      @include mq(s) {
+        display: none;
+      }
+    }
+  }
+
+  &:before {
+    content: "";
+    display: block;
+    width: calc(100% - 30px);
+    height: 1417px;
+    background: url("../img/snowflakes.png") no-repeat center/cover;
+    position: absolute;
+    bottom: -54px;
+    left: 0;
+    z-index: -1;
+
+    @include mq(xxl) {
+      width: 100%;
+    }
+
+    @include mq(s) {
+      display: none;
+    }
+  }
+}

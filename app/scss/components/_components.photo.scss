@@ -1,0 +1,117 @@
+/*
+    photo style
+ */
+
+.photo {
+  background: $darker-blue;
+  padding: 259px 0 72px;
+  position: relative;
+
+  @include mq(md) {
+    padding: 66px 0 42px;
+  }
+
+  .container {
+
+    h5 {
+      text-align: right;
+      margin-right: 54px;
+
+      @include mq(md) {
+        margin-right: 0;
+        text-align: center;
+      }
+    }
+
+    p.big {
+      text-align: right;
+      margin: 5px 54px 71px 0;
+
+      @include mq(md) {
+        text-align: center;
+        margin: 5px auto 33px;
+        margin: 5px auto 33px;
+      }
+    }
+  }
+
+  &__content {
+    align-items: flex-start;
+
+    @include mq(xs) {
+      display: block;
+    }
+
+    >a {
+      width: 19.12%;
+      //width: 20%;
+      //max-width: 350px;
+
+      @include mq(s) {
+        display: none;
+      }
+
+      @include mq(xs) {
+        display: block;
+        width: 100%;
+        max-width: 350px;
+        margin: 0 auto 10px;
+      }
+    }
+
+    figure {
+      width: 39.34%;
+      //width: 40%;
+      max-width: 720px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: baseline;
+
+      @include mq(s) {
+        width: 49%;
+      }
+
+      a {
+        width: 48.61%;
+        max-width: 350px;
+
+        &:first-child {
+          margin-bottom: 20px;
+        }
+      }
+
+      &:first-child {
+
+        @include mq(xs) {
+          display: none;
+        }
+      }
+
+      &:last-child {
+
+        @include mq(xs) {
+          width: 100%;
+          max-width: 350px;
+          margin: 0 auto;
+          //display: block;
+          //width: 48%;
+        }
+
+        a {
+
+          @include mq(xs) {
+            margin-bottom: 0;
+          }
+
+          &:nth-child(3), &:last-child {
+
+            @include mq(xs) {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,368 @@
+/*
+    general style
+ */
+
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  font-family: $hr, sans-serif;
+  font-size: 18px;
+  line-height: 1;
+  color: $pale-blue;
+  background: $darker-blue;
+}
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
+
+  @include mq(xl) {
+    width: 1140px;
+  }
+
+  @include mq(lg) {
+    width: 960px;
+  }
+
+  @include mq(md) {
+    width: 720px;
+  }
+
+  @include mq(s) {
+    width: 94%;
+  }
+
+  @include mq(xs) {
+    width: 90%;
+    min-width: 290px;
+  }
+}
+
+a {
+  display: block;
+  text-decoration: none;
+  text-align: center;
+
+  &:active, &:focus {
+    outline: none;
+  }
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+  object-fit: cover;
+  user-select: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $hb, sans-serif;
+  line-height: 1;
+}
+
+h1, h2 {
+  font-size: 96px;
+  color: $light-blue;
+  position: absolute;
+
+  @include mq(xs) {
+    font-size: 64px;
+  }
+}
+
+h3 {
+  font-size: 36px;
+  text-transform: uppercase;
+  color: $white;
+
+  @include mq(xs) {
+    font-size: 24px;
+  }
+}
+
+h4 {
+  font-size: 28px;
+  text-transform: uppercase;
+  color: $darker-blue;
+
+  @include mq(lg) {
+    font-size: 26px;
+  }
+
+  @include mq(xs) {
+    font-size: 24px;
+  }
+}
+
+h5 {
+  font-size: 24px;
+
+  &.button {
+    letter-spacing: 2px;
+  }
+}
+
+h6 {
+  font-size: 16px;
+  letter-spacing: 1px;
+}
+
+p {
+
+  &.big {
+    font-size: 20px;
+    line-height: 21px;
+  }
+}
+
+.price {
+
+  span {
+    font-family: $hb, sans-serif;
+    line-height: 1;
+
+    &.new-price {
+      font-size: 64px;
+      color: $yellow;
+
+      @include mq(xs) {
+        font-size: 40px;
+      }
+    }
+
+    &.old-price {
+      font-size: 36px;
+      color: $dark-blue;
+      display: inline-block;
+      position: relative;
+      margin-left: 3px;
+
+      @include mq(xs) {
+        font-size: 24px;
+      }
+
+      &:after {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 3px;
+        background: $dark-blue;
+        position: absolute;
+        top: 55%;
+        left: 0;
+        transform: translateY(-50%);
+      }
+    }
+  }
+}
+
+a.to-order, .form-group.order button {
+  font-family: $hb, sans-serif;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: $white;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 320px;
+  background: rgba(13, 47, 134, 0.4);
+  border: 2px solid $white;
+  transition: all 0.55s ease-in-out;
+  position: relative;
+
+  &:hover {
+    color: $blue;
+    background: $white;
+  }
+}
+
+a.to-order {
+  padding: 25px 0 17px;
+  z-index: 20;
+}
+
+.snow {
+  position: absolute;
+}
+
+form {
+  display: flex;
+
+  .form-group {
+    width: 280px;
+
+    input {
+      font-family: $hr, sans-serif;
+      font-size: 16px;
+      line-height: 1;
+      color: $dark-blue;
+      display: block;
+      box-sizing: border-box;
+      width: 100%;
+      padding: 28px 20px 11px;
+      max-height: 55px;
+      background: $white;
+      border: none;
+
+      &::placeholder {
+        font-family: $hr, sans-serif;
+        font-size: 16px;
+        line-height: 1;
+        color: $dark-blue;
+        opacity: 1;
+      }
+
+      &:active, &:focus, &:required {
+        outline: none;
+      }
+    }
+
+    button {
+      padding: 17px 0 10px;
+
+      @include mq(xs) {
+        max-width: 100% !important;
+      }
+    }
+
+    &.tel {
+      margin: 0 20px;
+    }
+
+    &.order {
+      width: 265px;
+      margin-left: auto;
+
+      @include mq(xs) {
+        max-width: 100%;
+      }
+    }
+  }
+}
+
+.gallery, .photo {
+
+  .container {
+
+    h5 {
+      text-transform: uppercase;
+      color: $white;
+
+      span {
+        color: $yellow;
+      }
+    }
+
+    p.big {
+      color: $white;
+
+      span {
+        font-family: $hb, sans-serif;
+        font-size: 24px;
+        letter-spacing: 2px;
+        color: $yellow;
+      }
+    }
+  }
+
+  &__content {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 0 45px;
+    display: flex;
+    justify-content: space-between;
+
+    @include mq(lg) {
+      padding: 0 25px;
+    }
+
+    @include mq(md) {
+      padding: 0 15px;
+    }
+
+    a {
+      position: relative;
+      overflow: hidden;
+
+      img {
+        width: 100%;
+        transition: all 0.5s ease-in-out;
+      }
+
+      &:after {
+        content: "";
+        display: block;
+        width: 60px;
+        height: 60px;
+        background: url("../img/zoom.png") no-repeat center/cover;
+        position: absolute;
+        bottom: 30px;
+        right: 20px;
+        opacity: 0;
+        transition: all 0.65s ease-in-out;
+      }
+
+      &:hover {
+
+        img {
+          filter: blur(3px);
+        }
+
+        &:after {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+
+a.bucket {
+  width: 100px;
+  height: 100px;
+  background: $yellow;
+  border-radius: 50%;
+  box-shadow: $shadow;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 99999;
+
+  @include mq(s) {
+    width: 75px;
+    height: 75px;
+    bottom: 20px;
+    right: 15px;
+  }
+
+  &:after {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 48px;
+    background: url("../img/bucket.png") no-repeat center/cover;
+    position: absolute;
+    top: 28px;
+    left: 22px;
+
+    @include mq(s) {
+      width: 38px;
+      height: 36px;
+      top: 21px;
+      left: 16.5px;
+    }
+  }
+}
+
+.fancybox-container {
+  z-index: 999999;
+}

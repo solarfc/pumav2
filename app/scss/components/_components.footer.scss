@@ -1,0 +1,185 @@
+/*
+    footer style
+ */
+
+.footer {
+  margin-top: -56px;
+  background: $white;
+  padding-bottom: 87px;
+  position: relative;
+
+  @include mq(md) {
+    margin-top: 0;
+    padding-bottom: 65px;
+  }
+
+  &__content {
+    position: relative;
+    z-index: 30;
+
+    img.logo {
+      margin: 0;
+
+      @include mq(md) {
+        margin: 0 auto;
+      }
+
+      @include mq(xs) {
+        width: 51%;
+        min-width: 130px;
+        max-width: 180px;
+      }
+    }
+
+    h4 {
+      max-width: 538px;
+      margin: 30px 0 25px;
+
+      @include mq(md) {
+        margin: 20px auto 22px;
+        text-align: center;
+      }
+    }
+
+    .price {
+
+      @include mq(md) {
+        text-align: center;
+      }
+    }
+
+    h6 {
+      text-transform: uppercase;
+      color: $darker-blue;
+      margin: 4px 0 15px 12px;
+
+      @include mq(md) {
+        text-align: center;
+        margin: 8px auto 21px;
+      }
+
+      output {
+        color: $yellow;
+      }
+    }
+
+    &-img {
+      position: absolute;
+      bottom: 25px;
+      right: -38px;
+
+      @include mq(lg) {
+        width: 545px;
+        bottom: 0;
+        right: 0;
+      }
+
+      @include mq(md) {
+        position: relative;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      @include mq(xs) {
+        width: 103%;
+        min-width: 300px;
+        //width: 100%;
+
+      }
+
+      img {
+        position: relative;
+        z-index: 9;
+
+        @include mq(lg) {
+          width: 100%;
+        }
+      }
+
+      h2 {
+        position: absolute;
+        top: -5px;
+        left: calc(50% + 4px);
+        transform: translateX(-50%);
+
+        @include mq(lg) {
+          font-size: 80px;
+        }
+
+        @include mq(xs) {
+          font-size: 40px;
+          top: -3px;
+          left: 50%;
+        }
+      }
+    }
+
+    a.to-order {
+
+      @include mq(md) {
+        margin: 22px auto 45px;
+      }
+    }
+
+    h6.address {
+      color: $light-blue;
+      margin-top: 70px;
+
+      @include mq(md) {
+        margin: 0 auto;
+        text-align: center;
+      }
+
+      a {
+        display: inline-block;
+        color: inherit;
+      }
+    }
+  }
+
+  .snow {
+    width: 100%;
+    height: 132px;
+    background: url("../img/footer/snow.png") no-repeat center/cover;
+    bottom: 0;
+    left: 0;
+    z-index: 25;
+
+    @include mq(md) {
+      height: 49px;
+    }
+  }
+
+  &:before, &:after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 966px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    @include mq(md) {
+      width: 1920px;
+      height: 1226px;
+      left: -484px;
+    }
+
+    @include mq(xs) {
+      width: 1010px;
+      height: 146%;
+      left: -416px;
+    }
+  }
+
+  &:before {
+    background: url("../img/footer/bg.png") no-repeat center/cover;
+    z-index: 20;
+  }
+
+  &:after {
+    background: url("../img/footer/vector.png") no-repeat center/cover;
+    z-index: 19;
+  }
+}

@@ -1,0 +1,202 @@
+/*
+    video style
+ */
+
+.video {
+  background: $darker-blue;
+  padding: 426px 0 57px;
+  position: relative;
+
+  @include mq(md) {
+    padding: 145px 0 60px;
+  }
+
+  &__content {
+    display: flex;
+
+    @include mq(lg) {
+      justify-content: space-between;
+    }
+
+    @include mq(md) {
+      display: block;
+    }
+
+    &-text {
+      width: 600px;
+      margin-right: 161px;
+
+      @include mq(lg) {
+        margin-right: 0;
+      }
+
+      @include mq(md) {
+        width: 100%;
+      }
+
+      p.big {
+
+        @include mq(s) {
+          display: none;
+        }
+      }
+
+      h3 {
+        text-transform: uppercase;
+        color: $white;
+        margin: 20px auto 51px;
+
+        @include mq(md) {
+          text-align: center;
+        }
+
+        @include mq(s) {
+          margin: 0 auto 20px;
+        }
+      }
+
+      figure.clip {
+        position: relative;
+        max-width: 600px;
+        height: 380px;
+        cursor: pointer;
+
+        @include mq(md) {
+          margin: 0 auto;
+        }
+
+        @include mq(s) {
+          height: auto;
+          padding-bottom: 60%;
+        }
+
+        img {
+          transition: all 0.55s ease-in-out;
+          filter: blur(3px);
+        }
+
+        .video-play {
+          width: 61px;
+          height: 60px;
+          background: url("../img/video/video-play.png") no-repeat center/cover;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          pointer-events: none;
+
+          @include mq(s) {
+            width: 46px;
+            height: 45px;
+          }
+        }
+
+        &:before {
+          content: "";
+          display: block;
+          width: 284px;
+          height: 155px;
+          background: url("../img/video/2.png") no-repeat center/cover;
+          position: absolute;
+          bottom: -90px;
+          right: -16px;
+          z-index: 11;
+          pointer-events: none;
+
+          @include mq(xs) {
+            width: 138px;
+            height: 75px;
+            bottom: -45px;
+            right: -8px;
+          }
+        }
+
+        &:hover {
+
+          img {
+            filter: blur(0);
+          }
+        }
+      }
+    }
+
+    &-info {
+      width: 300px;
+      margin-top: 37px;
+
+      @include mq(md) {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+      }
+
+      @include mq(xs) {
+        display: block;
+      }
+
+      figure {
+        position: relative;
+
+        @include mq(md) {
+          width: 32%;
+        }
+
+        @include mq(xs) {
+          width: 100%;
+        }
+
+        h5.button {
+          text-transform: uppercase;
+          color: $blue;
+          margin: 20px auto 0.8px;
+        }
+
+        p {
+
+        }
+
+        &:before {
+          content: "";
+          display: block;
+          width: 80px;
+          height: 80px;
+          background: url("../img/video/1.png") no-repeat center/auto, $gradient;
+          border-radius: 50%;
+          box-shadow: $shadow;
+        }
+
+        &:nth-child(2) {
+          margin: 70px auto;
+
+          @include mq(md) {
+            margin: 0;
+          }
+
+          @include mq(xs) {
+            margin: 40px auto;
+          }
+        }
+      }
+    }
+  }
+
+  &:before {
+    content: "";
+    display: block;
+    width: calc(100% - 30px);
+    height: 1417px;
+    background: url("../img/snowflakes.png") no-repeat center/cover;
+    position: absolute;
+    bottom: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    @include mq(xxl) {
+      width: 100%;
+    }
+
+    @include mq(s) {
+      display: none;
+    }
+  }
+}

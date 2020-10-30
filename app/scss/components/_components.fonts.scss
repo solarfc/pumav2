@@ -1,0 +1,36 @@
+/*
+    font face
+ */
+
+@font-face {
+  font-family: "HelveticaNeueCyr-Bold";
+  src: url("../fonts/HelveticaNeueCyr-Bold.woff");
+}
+$hb : "HelveticaNeueCyr-Bold";
+
+@font-face {
+  font-family: "HelveticaNeueCyr-Medium";
+  src: url("../fonts/HelveticaNeueCyr-Medium.woff");
+}
+$hm : "HelveticaNeueCyr-Medium";
+
+@font-face {
+  font-family: "HelveticaNeueCyr-Roman";
+  src: url("../fonts/HelveticaNeueCyr-Roman.woff");
+}
+$hr : "HelveticaNeueCyr-Roman";
+
+$blue: #29a8f0;
+$white: #fff;
+$gradient: linear-gradient(135deg, #fffbfb 0%, #d5f0ff 100%);
+$light-blue: #b3e2f4;
+$yellow: #faff00;
+$darker-blue: #052b41;
+$pale-blue: #94b6c2;
+$dark-blue: #276588;
+$blue2: #71c4f3;
+$inner: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+$shadow: 0px 2px 5px rgba(30, 103, 143, 0.6);
+$shadow2: drop-shadow(0px 0px 5px rgba(28, 85, 118, 0.7));
+$shadow3: 0px 5px 5px rgba(5, 19, 27, 0.5);
+$shadow4: 0px -5px 5px rgba(5, 19, 27, 0.5);

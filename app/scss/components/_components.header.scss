@@ -1,0 +1,270 @@
+/*
+    header style
+ */
+
+.header {
+  background: $white;
+  padding: 158px 0 270px;
+  position: relative;
+
+  @include mq(md) {
+    padding: 76px 0 9px;
+  }
+
+  &__content {
+    box-sizing: border-box;
+    padding-left: 391px;
+    position: relative;
+    z-index: 12;
+
+    @include mq(lg) {
+      padding-left: 451px;
+    }
+
+    @include mq(md) {
+      padding-left: 0;
+    }
+
+    img.logo {
+      margin: 0;
+
+      @include mq(md) {
+        margin: 0 auto;
+      }
+
+      @include mq(xs) {
+        width: 44%;
+        min-width: 130px;
+        max-width: 180px;
+      }
+    }
+
+    h4 {
+      margin: 14px auto 10px;
+      position: relative;
+      z-index: 11;
+
+      @include mq(md) {
+        margin: 20px auto 22px;
+        text-align: center;
+      }
+    }
+
+    .price {
+      position: relative;
+      z-index: 11;
+
+      @include mq(md) {
+        text-align: center;
+      }
+    }
+
+    h6 {
+      text-transform: uppercase;
+      color: $darker-blue;
+      margin: 4px 0 15px 14px;
+      position: relative;
+      z-index: 11;
+
+      @include mq(md) {
+        text-align: center;
+        margin: 8px auto -8px;
+      }
+
+      output {
+        color: $yellow;
+      }
+    }
+
+    &-img {
+      position: absolute;
+      top: -64px;
+      left: -51px;
+
+      @include mq(lg) {
+        left: -20px;
+      }
+
+      @include mq(md) {
+        position: relative;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 550px;
+      }
+
+      @include mq(s) {
+        width: 100%;
+        max-width: 550px;
+      }
+
+      @include mq(xs) {
+        position: relative;
+        width: 300px;
+      }
+
+      img {
+        position: relative;
+        z-index: 9;
+
+        @include mq(md) {
+          width: 100%;
+        }
+      }
+
+      h1 {
+        bottom: 184px;
+        left: 2px;
+
+        @include mq(xs) {
+          bottom: 48px;
+          left: -4px;
+        }
+      }
+    }
+
+    a.to-order {
+
+      @include mq(md) {
+        margin: -11px auto 0;
+      }
+    }
+
+    &-advantages {
+      display: flex;
+      margin: 125px 0 0 98px;
+
+      @include mq(lg) {
+        display: block;
+      }
+
+      @include mq(md) {
+        display: flex;
+        margin: 84px auto 0;
+        justify-content: space-around;
+      }
+
+      @include mq(xs) {
+        display: block;
+      }
+
+      figure {
+        box-sizing: border-box;
+        padding-left: 91px;
+        width: 299px;
+        position: relative;
+
+        @include mq(xs) {
+          width: 100%;
+        }
+
+        p.big {
+          color: $white;
+        }
+
+        &:before {
+          content: "";
+          display: block;
+          width: 80px;
+          height: 80px;
+          box-shadow: $shadow;
+          border-radius: 50%;
+          position: absolute;
+          top: 50%;
+          left: 0;
+          transform: translateY(-50%);
+        }
+
+        &:nth-child(1) {
+          margin-right: 65px;
+
+          @include mq(lg) {
+            margin-right: 0;
+            margin-bottom: 78px;
+          }
+
+          @include mq(md) {
+            margin-bottom: 0;
+          }
+
+          @include mq(xs) {
+            margin-bottom: 78px;
+          }
+
+          &:before {
+            background: url("../img/header/1.png") no-repeat center/auto, $gradient;
+          }
+        }
+
+        &:nth-child(2) {
+
+          &:before {
+            background: url("../img/header/2.png") no-repeat center/auto, $gradient;
+          }
+        }
+      }
+    }
+  }
+
+  .snow {
+    width: 100%;
+    height: 330px;
+    background: url("../img/header/snow.png") no-repeat center/cover;
+    top: 0;
+    left: 0;
+    z-index: 9;
+
+    @include mq(md) {
+      height: 194px;
+    }
+  }
+
+  &:before, &:after {
+    content: "";
+    display: block;
+    width: 100%;
+    position: absolute;
+    top: 8px;
+    left: 0;
+    z-index: 7;
+    //z-index: -1;
+
+    @include mq(md) {
+      width: 1920px;
+      left: -243px;
+    }
+
+    @include mq(xs) {
+      width: 1000px;
+      left: -90px;
+    }
+  }
+
+  &:before {
+    height: 1352px;
+    background: url("../img/header/bg.png") no-repeat center/cover;
+
+    @include mq(md) {
+      height: 1580px;
+    }
+
+    @include mq(xs) {
+      height: 1352px;
+    }
+  }
+
+  &:after {
+    height: 1362px;
+    background: url("../img/header/vector.png") no-repeat center/cover;
+    z-index: 3;
+    //z-index: -3;
+
+    @include mq(md) {
+      height: 1590px;
+    }
+
+    @include mq(xs) {
+      height: 1362px;
+    }
+  }
+}
